@@ -1,0 +1,50 @@
+/* * {
+    font-family: monospace;
+} */
+
+/* * digunakan untuk menselect semuanya */
+html {
+    font-size: 22px;
+}
+body {
+    
+}
+
+main {
+    font-family: monospace;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+
+p {
+    color: purple;
+}
+
+p {
+    color: red;
+}
+
+/* selector yang paling terakhir yang dibaca/ overridden*/
+
+h1, h2 {
+    color: blue;
+}
+
+
+.gray{
+    color: gray;
+}
+
+/* class itu lebih spesifik jadi dia yang bakal digunakan */
+
+#second {
+    font-style: italic;
+}
+
+.highlight {
+    text-transform: uppercase;
+    background-color: yellow;
+}

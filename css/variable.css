@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    /* FONT */
+    --FF: 'Nunito';
+    --FS: 1.5rem;
+    --FS-XL: 3rem;
+
+    /* COLOR */
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR: #1E293b;
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+
+
+    /* GENERAL; */
+    --PADDING: 0.5rem;
+    --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+    --BORDERS: 2px solid #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR: #000;
+        --ALT-BGCOLOR: #333;
+        --RADIAL-COLOR: rgb(194, 194, 194);
+        --SQUARE-BGCOLOR: rgb(184, 129, 184);
+
+    }
+}
+
+body {
+    font: var(--FS) var(--FF),courier;
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(white, #475569 );
+    display: flex;
+    flex-direction: column;
+
+}
+
+header, nav,  footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer {
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: whitesmoke;
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: #fff;
+    color:var(--DARK-COLOR);
+    padding: var(--PADDING);
+    border-bottom: var(--BORDERS);
+    box-shadow: var(--SHADOWS);
+}
+
+main { 
+    flex-grow: 1; /* Biar full halamannya */
+
+    padding: 10px 0;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px)
+}
+footer {
+    bottom: 0;
+}
+
+.square--highlight {
+    --SQUARE-BGCOLOR: cornflowerblue;
+}
+
+/* FEATURES */
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS);
+    box-shadow: var(--SHADOWS);
+
+}
